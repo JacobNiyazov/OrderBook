@@ -15,13 +15,13 @@ This project implements a low-latency order book for trading systems using a cli
 ### Data Structures
 
 - **Buy and Sell Trees**: Implemented using Binary Search Trees to ensure O(log n) complexity for additions, insertions, and deletions.
-- **Doubly Linked Lists**: Each limit in the trees has a doubly linked list for managing orders at the same price, allowing O(1) operations for adding and removing orders.
+- **Doubly Linked Lists**: Each limit in the trees has a doubly linked list for managing orders at the same price, allowing O(n) complexity for adding and removing orders.
 - **Hash Set**: Maintain a hash set of orders with there corresponding IDs for O(1) look up time.
 
 ### Order Book Operations
 
 - **Add Order**: O(log n) due to the binary search tree insert operation.
-- **Cancel Order**: O(log n) for searching and O(1) for deletion.
+- **Cancel Order**: O(log n) for searching and O(n) for deletion.
 - **Execute Order**: Matches orders in O(log n) by traversing the tree.
 
 ## Setup and Running
